@@ -17,12 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
+Route::get('/videos', function () {
     return view('videos');
 });
 
-Route::group(['middleware' => ['web']], function() {
-    Route::get('storage/pro5images/icon.jpg', function () {
-        return Image::make(storage_path() . '/pro5images/' . 'icon.jpg')->response();
-    });
+Route::get('/register', function () {
+    return view('register');
 });
+
+Route::get('/videos', 'videosController@index');

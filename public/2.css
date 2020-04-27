@@ -1,0 +1,89 @@
+#footerId {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #04091e;
+  size: 4px;
+
+}
+.fbimg {
+	position: relative;
+  width: 3;
+  height:4;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  left: 120px;
+  top:30px;
+  bottom: 0;
+ }
+#headerId {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  size: 4px;
+}
+
+.centroTitle {
+
+	position: fixed;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  height: 5%;
+  size: 4px;
+
+}
+
+.youtube {
+
+	position: fixed;
+  left: 0;
+  top: 570px;
+  width: 100%;
+  height: 70%;
+  size: 4px;
+  background-color: #fff1d0;
+
+
+}
+
+.proposito {
+
+	position: fixed;
+  left: 20%;
+  top: 230px;
+  width: 40%;
+  height: 100%;
+  size: 4px;
+
+
+
+}
+
+#scrollDiv {
+
+	position: fixed;
+  left: 0;
+  top:40px;
+  width: 100%;
+  height: 80%;
+  size: 4px;
+
+  overflow: auto;
+  transition: top 0.3s;
+
+}
+
+.footer {
+	position: fixed;
+  background-color: #04091e;
+  color: #878787;
+	height: 80px;
+	width:100%;
+	left: 0;
+  bottom: 0;
+}
