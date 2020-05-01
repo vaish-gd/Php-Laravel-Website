@@ -95,6 +95,16 @@ input[type=text], select {
         name ="confirmPassword" id="confirmPassword"
 
       required> <br />
+
+
+      @if (session('alert'))
+       {{ session('alert') }}
+       @endif
+
+      {{$errors}}
+
+
+
       <input type='text' placeholder='Direccion' style="width:60%" name ="address" id="address" required>
        {{@csrf_field()}}
       <input type="submit" value="Guardar" style="color:white;background-color:blue;" >
