@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-		<script type="text/javascript" src="login.js">
+		<script type="text/javascript" src="{{url('login.js')}}">
 
 
 
@@ -26,7 +26,7 @@
 
 	<title>
 		</title>
-		<link rel="stylesheet" type="text/css" href="mijares.css">
+		<link rel="stylesheet" type="text/css" href="{{url('mijares.css')}}">
 </head>
 <body>
 	<div id="headerId">
@@ -50,7 +50,7 @@
 
 		<a href="http://vxg8753.uta.cloud/" style="left:1130px;top:10px;position:absolute;width:80%;text-decoration:none;color:black;">Blog</a>
 
-		<a href="Register.html" style="left:1187px;top:10px;position:absolute;width:80%;text-decoration:none;color:black;">Registro</a>
+		<a href="/register" style="left:1187px;top:10px;position:absolute;width:80%;text-decoration:none;color:black;">Registro</a>
 	</div>
 
 	<div id="scrollDiv">
