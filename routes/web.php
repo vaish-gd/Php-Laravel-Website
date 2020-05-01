@@ -26,3 +26,9 @@ Route::get('/register', function () {
 });
 
 Route::get('/videos', 'videosController@index');
+
+Route::post('regController','regController@index');
+
+//Route::post('/register', 'register-controller@putData')->name('SubmitForm');
+
+//Route::get('/register', 'register-controller@index');

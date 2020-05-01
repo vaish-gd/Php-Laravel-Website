@@ -69,15 +69,23 @@ input[type=text], select {
   <p style="position: absolute;top:200px;font-family: Roboto;font-size: 25px;font-weight: 300;line-height: 1.667;left:600px">
     <b style="font-family: Roboto;">Registro </b> </p>
 
-    <form style="position: absolute; top:300px; left:200px" onsubmit="submitValidator(); return false;" >
+
+
+    <form style="position: absolute; top:300px; left:200px" action = "regController"  method="post">
       <input type='text' style=”display:inline” placeholder='Nombre'
 
       name ="name1" id="name1"
 
-      required>
+      >
+
+
       <input type='text' style=”display:inline” placeholder='Correo'
       name ="email" id="email"
-      required> <br />
+       >
+
+
+
+      <br />
       <input type='text' style=”display:inline” placeholder='Contrasena'
       name ="password" id="password"
 
@@ -87,14 +95,14 @@ input[type=text], select {
         name ="confirmPassword" id="confirmPassword"
 
       required> <br />
-      <input type='text' placeholder='Direccion' style="width:60%"
-
-
-      name ="address" id="address"
-
-       required>
+      <input type='text' placeholder='Direccion' style="width:60%" name ="address" id="address" required>
+       {{@csrf_field()}}
       <input type="submit" value="Guardar" style="color:white;background-color:blue;" >
     </form>
+
+
+
+
 
     <div class="footer">
         Copyright ©2020 All rights reserved | This template is made with
