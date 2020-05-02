@@ -62,7 +62,7 @@
 <p style="position: absolute;top:35%;left:48%;font-family: Roboto;font-size:25px;text-decoration: bold;"> <b>Iniciar Sesion</b></p>
 
 
-<form onsubmit="submitValidator(); return false;">
+<form  method="post" action="loginController">
 <input type="text" placeholder="Nombre de Usuario o Correo"
 style="position:absolute;top:48%;left:32%;width:14%;"
 
@@ -75,7 +75,22 @@ style="position:absolute;top:48%;left:52%;width:14%;"
 id="password" name = "password"
 required>
 
-<input type="submit" style="background-color: #6059f6;color: #fff;position: absolute;top:58%;left:48%;" > Entrar
+@if (session('alert'))
+ {{ session('alert') }}
+ @endif
+
+
+
+{{$errors}}
+
+
+{{@csrf_field()}}
+<input type="submit" style="background-color: #6059f6;color: #fff;position: absolute;top:58%;left:48%;" >
+
+
+
+
+
 
 </form>
 

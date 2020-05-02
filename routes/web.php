@@ -21,6 +21,14 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+Route::get('/student', function () {
+    return view('student');
+});
+
 Route::get('/videos', function () {
     return view('videos');
 });
@@ -32,6 +40,8 @@ Route::get('/register', function () {
 Route::get('/videos', 'videosController@index');
 
 Route::post('regController','regController@index');
+
+Route::post('loginController','loginController@index');
 
 //Route::post('/register', 'register-controller@putData')->name('SubmitForm');
 
