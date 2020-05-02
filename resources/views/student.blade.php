@@ -124,7 +124,7 @@ cell3.innerHTML = "919 453 0134";
 </head>
 <body>
 
-	<h1> Welcome User
+	<h1> Welcome User {{session()->get('data')}} </h1>
 
 	<div id="d1"> </div>
 	<button onclick="event1()" > Events </button>

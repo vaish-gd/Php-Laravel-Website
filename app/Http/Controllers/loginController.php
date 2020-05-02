@@ -58,13 +58,13 @@ class loginController extends Controller
 
           echo "hiiiii";
 
-          return view('admin');
+          return redirect()->to('admin');
 
         }
         else{
           //  return redirect()->route('student');
 
-           return view('student');
+           return redirect()->to('student')->with('data', $email1);
 
         }
 
