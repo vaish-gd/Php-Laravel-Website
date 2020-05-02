@@ -52,9 +52,11 @@ class loginController extends Controller
       //echo $email1;
       if( $pass1 ==  $req->input('password')){
 
-        if(strpos("admin",$email1)===true){
+        if(strpos($email1, 'admin') !== false){
 
           //return redirect()->route('admin');
+
+          echo "hiiiii";
 
           return view('admin');
 

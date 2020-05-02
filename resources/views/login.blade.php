@@ -75,13 +75,18 @@ style="position:absolute;top:48%;left:52%;width:14%;"
 id="password" name = "password"
 required>
 
+
+<div style="position:absolute;">
 @if (session('alert'))
  {{ session('alert') }}
  @endif
 
+ {{$errors}}
+</div>
 
 
-{{$errors}}
+
+
 
 
 {{@csrf_field()}}
