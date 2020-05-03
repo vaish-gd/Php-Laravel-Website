@@ -33,7 +33,7 @@ class regController extends Controller
 
     ]);
 
-  
+
 
     $registeredDetails = DB::select('select * from Register ');
 
@@ -71,6 +71,11 @@ class regController extends Controller
 
     $values = array('name' => $name,'email' => $email, 'password' =>$password,'address' => $address );
 DB::table('Register')->insert($values);
+
+$subject = 'Testing PHP Mail by dr Diaz';
+$message = 'your Registration is successful with Augusto Mijares';
+$headers = 'Hi header';
+mail($email,$subject,$message,$headers);
 
         return $req->input();
 

@@ -14,11 +14,32 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
+
+Route::get('/semblanza', function () {
+    return view('semblanza');
+});
+
+Route::get('/centro', function () {
+    return view('centro');
+});
+
+Route::get('/proyectos', function () {
+    return view('proyectos');
+});
+
+Route::get('/eventos', function () {
+    return view('eventos');
+});
+
 
 Route::get('/login', function () {
     return view('login');
+});
+
+Route::get('/equipo', function () {
+    return view('equipo');
 });
 
 Route::get('/admin', function () {
@@ -38,6 +59,8 @@ Route::get('/register', function () {
 });
 
 Route::get('/videos', 'videosController@index');
+
+Route::get('/equipo', 'equipoController@index');
 
 Route::post('regController','regController@index');
 

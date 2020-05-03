@@ -4,18 +4,18 @@ include "db_connect.php";
 $conn = OpenCon();
 if (count($_FILES) > 0) {
     if (is_uploaded_file($_FILES['userImage']['tmp_name'])) {
-
+       
         $imgData = addslashes(file_get_contents($_FILES['userImage']['tmp_name']));
         $imageProperties = getimageSize($_FILES['userImage']['tmp_name']);
 
         $name=$_POST["name"];
 
         $text = $_POST["text1"];
-
+        
         $sql = "INSERT INTO  professor2 (image,text,type,name)
 	VALUES('{$imgData}','{$text}','{$imageProperties['mime']}','{$name}')";
         $current_id = mysqli_query($conn, $sql) or die("<b>Error:</b> Problem on Image Insert<br/>" . mysqli_error($conn));
-
+        
     }
 }
 ?>
@@ -33,7 +33,7 @@ if (count($_FILES) > 0) {
 
         var form = new FormData();
 
-
+      
 
       form.append("deleteProf", true);
 
@@ -67,7 +67,7 @@ function fetchProf(){
 
         var form = new FormData();
 
-
+      
 
       form.append("deleteProf", true);
 
@@ -82,7 +82,7 @@ function fetchProf(){
        var pq = xhr.responseText;
        console.log(pq);
 
-      document.getElementById("d1").innerHTML=pq;
+      document.getElementById("d1").innerHTML=pq;   
 
        if(pq.includes("exists")){
         alert("user already exists");
@@ -101,7 +101,7 @@ function addVideo(){
 
 }
 
-
+	
 
 	</script>
 	<title>
@@ -111,14 +111,14 @@ function addVideo(){
 <body>
 	<h1>  Welcome to admin Console - to Regulate (fetch,delete,and upload) </h1>
 
-
+	
 
 	<h2> Submit the form below for Professors database upload</h2>
 
 	<form name="frmImage" enctype="multipart/form-data" action=""
         method="post" class="frmImageUpload">
         <label>Upload Professor Image File:</label><br /> <input name="userImage"
-            type="file" class="inputFile" />
+            type="file" class="inputFile" /> 
 
 
 Name:<input type="text" name="name" required>
@@ -150,8 +150,24 @@ Text: <input type="text" name="text1" required>
     <div id="d1"> </div>
 
 
+   
 
-
-
+   
 </body>
-</html>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

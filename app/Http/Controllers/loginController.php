@@ -58,7 +58,9 @@ class loginController extends Controller
 
           echo "hiiiii";
 
-          return redirect()->to('admin');
+        //  return redirect()->to('admin');
+
+      return redirect()->to ( url('admin.php'));
 
         }
         else{
